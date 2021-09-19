@@ -10,16 +10,24 @@ import './styles.css';
 const Home = (props) => {
   const [tasks, setTasks] = useState([
     {
-      id: '1',
-      title: "Estudar Programação",
+      id: uuidv4(),
+      title: "Fazenda Feliz",
       completed: false
+    },
+    {
+      id: uuidv4(),
+      title: "Orkut 2.0",
+      completed: true
     }
+    
   ]);
 
   useEffect(() => {
     const fetchTasks = async() => {
+      // Consume api que mostra os projetos
       const {data} = await axios.get("https://jsonplaceholder.cypress.io/todos?_limit=10");
-      setTasks(data);
+      const getTasks = [...tasks, ...data]
+      setTasks(getTasks);
     };
     fetchTasks();
   }, [])
