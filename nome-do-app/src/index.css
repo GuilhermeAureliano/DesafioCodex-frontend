@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+  background-color: rgb(245, 245, 245);
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+input {
+  border: 1px solid #a1a1a1;
+  border-radius: 6px;
+  outline: none;
+  padding: 0px 5px;
+}
+
+input:focus {  
+  border-color: #FF7A0A;
+}
+
+button {
+  border-radius: 6px;
+  background-color: #FF7A0A;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  background-color: #444;
+  color: #FF7A0A;
+}
+
+a {
+  text-decoration: none;
+  color: #FF7A0A;
+}
